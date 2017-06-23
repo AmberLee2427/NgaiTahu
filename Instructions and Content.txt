@@ -1,0 +1,37 @@
+---------------------------------------------------------------------------
+Contact Center Tracker
+---------------------------------------------------------------------------
+Includes:
+	Contact Centre Tracker.xlsm		macro enabled excel workbook
+	Report Template.xls			excel workbook
+	.\Temp\ 				folder
+
+---------------------------------------------------------------------------
+Contact Center Tracker.xlsm
+
+Sheets:
+	Home 		- select user on this page
+			- macro for adding new data to the teporary data file
+			- macro for exporting "Temp" sheet to .\Temp\ and moving temporary data to the "Master" sheet
+			- macro for creating a report on selected collected data based on the template
+
+	Temp		- contains temporary data
+			- macro for adding new data to the teporary data file
+			- macro for exporting "Temp" sheet to a .xls file in the file location ".\Temp\" and moving temporary data to the "Master" sheet
+
+	Master		- contains data for analysis on the rest of the sheets
+			- macro for importing data from an exported .xls file in ".\Temp\"
+			- macro for deleting dulicates in the "Master" sheet
+				this macro also makes time and date formats uniform
+
+	Totals		- anlysis on the types of correspondence and topic covered
+
+	Post and Chat	- analysis on topics covered over post and chat
+
+	Calls		- analysis on topics covered on calls and repeat calls
+
+	Email		- analysis on topics covered on emails and repeat emails
+
+	Lists		- named list for logic
+			- contains selctions for new data entries
+			- contains named list of currrent employees used fo "select user" on "Home" page
